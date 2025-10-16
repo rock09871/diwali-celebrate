@@ -1,0 +1,327 @@
+ body {
+     background: radial-gradient(circle, #fffad6 10%, #faafc2 70%, #f88379 100%);
+     font-family: 'Segoe Script', cursive, sans-serif;
+     color: #884a13;
+     text-align: center;
+     padding: 50px 20px;
+     overflow-x: hidden;
+     position: relative;
+     min-height: 100vh;
+ }
+ 
+ h1 {
+     font-size: 3.8em;
+     margin-bottom: 20px;
+     color: #c8641c;
+     text-shadow: 0 0 15px #ffd700, 0 0 26px #ffb300, 0 0 35px #ff8c00, 0 0 45px #ffaa00;
+     animation: glowText 2.5s infinite alternate ease-in-out;
+     position: relative;
+     z-index: 1000;
+ }
+ 
+ @keyframes glowText {
+     0% {
+         text-shadow: 0 0 15px #ffd700, 0 0 26px #ffb300, 0 0 35px #ff8c00, 0 0 45px #ffaa00;
+         color: #c8641c;
+     }
+     100% {
+         text-shadow: 0 0 30px #fff8a6, 0 0 40px #ffdb4d, 0 0 50px #ffb300, 0 0 60px #ffaa00;
+         color: #e67300;
+     }
+ }
+ 
+ .diya {
+     width: 120px;
+     margin: 20px auto;
+     display: block;
+     box-shadow: 0 0 30px 12px #ffdd57;
+     border-radius: 50%;
+     padding: 6px;
+     background-color: #fff3cf;
+     animation: flicker 1.5s infinite alternate ease-in-out;
+     position: relative;
+     z-index: 10;
+     filter: drop-shadow(0 0 10px #ffdb58);
+     transition: transform 0.3s ease;
+ }
+ 
+ .diya:hover {
+     transform: scale(1.1);
+     box-shadow: 0 0 45px 20px #ffdd57;
+ }
+ 
+ @keyframes flicker {
+     0% {
+         opacity: 1;
+         box-shadow: 0 0 30px 12px #ffdd57;
+     }
+     50% {
+         opacity: 0.8;
+         box-shadow: 0 0 45px 20px #ffae42;
+     }
+     100% {
+         opacity: 1;
+         box-shadow: 0 0 30px 12px #ffdd57;
+     }
+ }
+ 
+ .floating-diya {
+     position: absolute;
+     bottom: 20px;
+     animation: floatY 6s ease-in-out infinite;
+     filter: drop-shadow(0 0 5px #ffca28);
+     opacity: 0.8;
+     transition: opacity 0.3s ease;
+ }
+ 
+ .floating-diya:hover {
+     opacity: 1;
+     filter: drop-shadow(0 0 15px #ffd54f);
+ }
+ 
+ .floating-diya.diya-small {
+     width: 50px;
+     animation-duration: 5s;
+ }
+ 
+ .floating-diya.diya-medium {
+     width: 70px;
+     animation-duration: 6.5s;
+ }
+ 
+ .floating-diya.diya-large {
+     width: 90px;
+     animation-duration: 7.5s;
+ }
+ 
+ .floating-diya.pos1 {
+     left: 8%;
+     animation-delay: 0s;
+ }
+ 
+ .floating-diya.pos2 {
+     left: 18%;
+     animation-delay: 2s;
+ }
+ 
+ .floating-diya.pos3 {
+     left: 33%;
+     animation-delay: 4s;
+ }
+ 
+ .floating-diya.pos4 {
+     left: 49%;
+     animation-delay: 1.2s;
+ }
+ 
+ .floating-diya.pos5 {
+     left: 61%;
+     animation-delay: 3.5s;
+ }
+ 
+ .floating-diya.pos6 {
+     left: 75%;
+     animation-delay: 5s;
+ }
+ 
+ .floating-diya.pos7 {
+     left: 89%;
+     animation-delay: 6.5s;
+ }
+ 
+ @keyframes floatY {
+     0%,
+     100% {
+         transform: translateY(0px);
+     }
+     50% {
+         transform: translateY(-20px);
+     }
+ }
+ 
+ .gifts-section {
+     max-width: 900px;
+     margin: 40px auto 0 auto;
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     gap: 26px;
+     position: relative;
+     z-index: 100;
+ }
+ 
+ .gift-card {
+     background: #fff9e2;
+     border-radius: 20px;
+     box-shadow: 0 12px 30px rgba(255, 183, 0, 0.25), 0 8px 15px rgba(255, 152, 0, 0.2);
+     padding: 16px 18px 28px 18px;
+     width: 210px;
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+     cursor: pointer;
+     overflow: hidden;
+     text-align: center;
+ }
+ 
+ .gift-card:hover {
+     transform: translateY(-18px) scale(1.05);
+     box-shadow: 0 20px 40px rgba(255, 190, 0, 0.45), 0 14px 50px rgba(255, 160, 0, 0.3);
+ }
+ 
+ .gift-icon {
+     font-size: 0;
+     /* hide emoji icons since we have images */
+     margin-bottom: 12px;
+ }
+ 
+ .gift-img {
+     width: 160px;
+     height: 120px;
+     object-fit: cover;
+     border-radius: 14px;
+     margin-bottom: 14px;
+     box-shadow: 0 4px 10px #ffbc34aa;
+     transition: transform 0.3s ease;
+ }
+ 
+ .gift-card:hover .gift-img {
+     transform: scale(1.05);
+     box-shadow: 0 8px 24px #ffcc44cc;
+ }
+ 
+ .gift-title {
+     font-weight: 700;
+     font-size: 1.25em;
+     margin-bottom: 8px;
+     color: #d26900;
+     text-shadow: 1px 1px 1px #ffb74d;
+ }
+ 
+ .gift-desc {
+     font-size: 1em;
+     color: #6b4b00;
+     line-height: 1.4;
+     min-height: 60px;
+ }
+ 
+ @media (max-width: 768px) {
+     .gifts-section {
+         flex-direction: column;
+         align-items: center;
+     }
+     h1 {
+         font-size: 3em;
+     }
+     .diya {
+         width: 90px;
+     }
+     .floating-diya {
+         display: none;
+     }
+     .gift-img {
+         width: 90%;
+         height: auto;
+         max-width: 300px;
+     }
+ }
+ 
+ .logo {
+     width: 100px;
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+     animation: bounce 2s infinite;
+ }
+ 
+ .logo:hover {
+     transform: scale(1.1);
+     box-shadow: 0 0 10px rgba(255, 105, 180, 0.8);
+ }
+ 
+ @keyframes bounce {
+     0%,
+     100% {
+         transform: translateY(0);
+     }
+     50% {
+         transform: translateY(-20px);
+     }
+ }
+ 
+ :root {
+     --glow-color: #ff69b4;
+     --pulse-duration: 3s;
+     --bounce-distance: 20px;
+ }
+ 
+ .logo {
+     width: 120px;
+     cursor: pointer;
+     transition: transform 0.4s ease, box-shadow 0.4s ease;
+     animation: bounce var(--pulse-duration) infinite;
+     filter: drop-shadow(0 0 5px var(--glow-color));
+     will-change: transform, box-shadow, filter;
+ }
+ 
+ .inline-logo-text img,
+ .inline-logo-text span {
+     display: inline-block;
+     vertical-align: middle;
+ }
+ 
+ .inline-logo-text span {
+     margin-left: 8px;
+ }
+ 
+ .inline-logo-text {
+     display: flex;
+     align-items: center;
+     gap: 8px;
+     /* space between logo and text */
+ }
+ 
+ .inline-logo-text img {
+     width: 70px;
+     height: 70px;
+     cursor: pointer;
+     transition: transform 0.3s ease, shadow 0.3s ease;
+     animation: bounce 2.5s infinite;
+     filter: drop-shadow(0 0 5px #ff007f);
+ }
+ 
+ .inline-logo-text img:hover {
+     transform: scale(1.2);
+     shadow: 0 0 15px #ff4da6, 0 0 30px #ff66b2;
+     animation: pulseGlow 1.5s ease-in-out infinite alternate, bounce 2.5s infinite;
+     filter: drop-shadow(0 0 15px #ff007f);
+ }
+ 
+ @keyframes bounce {
+     0%,
+     100% {
+         transform: translateY(0);
+     }
+     50% {
+         transform: translateY(-15px);
+     }
+ }
+ 
+ @keyframes pulseGlow {
+     0% {
+         shadow: 0 0 15px #ff4da6, 0 0 30px #ff66b2;
+     }
+     100% {
+         shadow: 0 0 30px #ff007f, 0 0 50px #ff3399;
+     }
+ }
+ 
+ .inline-logo-text {
+     display: flex;
+     justify-content: center;
+     /* Centers items horizontally */
+     align-items: center;
+     /* Centers items vertically */
+     gap: 8px;
+     /* Space between the logo and text */
+ }
+ 
+ .underline-text {
+     text-decoration: underline;
+ }
